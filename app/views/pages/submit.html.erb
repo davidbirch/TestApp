@@ -1,0 +1,103 @@
+<h2>Pay Me</h1>
+<p>This is a test form to make a payment using JSON</p>
+
+<script type="text/javascript"> 
+        // wait for the DOM to be loaded 
+        $(document).ready(function() { 
+            // bind 'myForm' and provide a simple callback function 
+            $('#myForm').ajaxForm(function() { 
+                alert("Thank you for your comment!"); 
+            }); 
+        }); 
+</script> 
+
+
+
+<form id="myForm" method="post" action="https://www.dajuki.com/orders.json">
+  <fieldset>  
+    <legend>Order Details</legend>
+    <ol>
+      <li> 
+        <div class="field">
+          <label for="order_total_amount">Total amount</label>
+          <input id="order_total_amount" name="order[total_amount]" type="number" />
+        </div>
+      </li>
+    </ol>
+  </fieldset>
+  
+  <fieldset>
+    <legend>Card Details</legend>
+    <ol>
+      <li>
+        <div class="field">
+          <label for="order_first_name">First name</label>
+          <input id="order_first_name" name="order[first_name]" size="30" type="text" />
+        </div>
+      </li>
+      <li>
+        <div class="field">
+        <label for="order_last_name">Last name</label>
+        <input id="order_last_name" name="order[last_name]" size="30" type="text" />
+        </div>
+      </li>
+      <li>
+        <div class="field">
+          <label for="order_card_number">Card number</label>
+          <input id="order_card_number" name="order[card_number]" size="30" type="text" />
+        </div>
+      </li>
+      <li>
+        <div class="field">
+          <label for="order_card_expires_on">Card expires on</label>
+          <select id="order_card_expires_on_1i" name="order[card_expires_on(1i)]">
+            <option selected="selected" value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+          </select>
+          <select id="order_card_expires_on_2i" name="order[card_expires_on(2i)]">
+            <option value="1">1 - January</option>
+            <option selected="selected" value="2">2 - February</option>
+            <option value="3">3 - March</option>
+            <option value="4">4 - April</option>
+            <option value="5">5 - May</option>
+            <option value="6">6 - June</option>
+            <option value="7">7 - July</option>
+            <option value="8">8 - August</option>
+            <option value="9">9 - September</option>
+            <option value="10">10 - October</option>
+            <option value="11">11 - November</option>
+            <option value="12">12 - December</option>
+          </select>
+          <input id="order_card_expires_on_3i" name="order[card_expires_on(3i)]" type="hidden" value="1" />
+        </div>
+      </li>
+    </ol>
+  </fieldset>
+  
+  <fieldset>
+    <legend>Card Verification Value (CVV)</legend>
+    <ol>
+      <li>
+        <div class="field">
+          <label for="order_card_verification">Card verification</label>
+          <input id="order_card_verification" name="order[card_verification]" size="30" type="text" />
+        </div>
+      </li>
+    </ol>
+  </fieldset>
+  
+  <fieldset class="submit">
+    <div class="actions">
+      <input name="commit" type="submit" value="Create Order" />
+    </div>
+  </fieldset>
+</form>

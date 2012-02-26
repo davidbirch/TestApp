@@ -1,4 +1,15 @@
 TestApp::Application.routes.draw do
+  
+  
+
+
+  # -------------------------------------------------------
+  # default route
+  root :to => 'pages#submit'
+
+  # -------------------------------------------------------
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
